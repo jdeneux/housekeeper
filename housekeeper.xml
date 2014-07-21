@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<configuration>
+  <logging>
+    <path value="D:\workspace\dev\ps"/>
+    <!-- Mask available : 
+      %PACKAGE : name of the package name to Archive / Clean
+      %DATE    : The current date YYYYMMDD
+      %TIME    : The current time HHMMSS
+    -->
+    <filename value="housekeeper_%PACKAGE_%DATE_%TIME"/>
+  </logging>
+  <compress value="D:\workspace\dev\ps\rar.exe"/>
+  <packages>
+    <package value="AllLogs" archivepath="D:\workspace\dev\ps\archives" archiveafter="7" deleteafter="7">
+        <pattern path="D:\workspace\dev\ps\logs" pattern="\.log$" recursive="true"/>
+        <pattern path="D:\workspace\dev\ps\logs" pattern="\.txt$" recursive="true"/>
+    </package>
+    <!--package value="PatcherLogs" archivepath="D:\workspace\dev\ps\archives" archiveafter="7" deleteafter="" deletearchiveafter="">
+        <pattern path="D:\workspace\dev\ps\logs\Patcher Logs" pattern="\.log$" recursive="true"/>
+    </package-->
+  </packages>
+</configuration>
